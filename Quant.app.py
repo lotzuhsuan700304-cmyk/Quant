@@ -151,7 +151,7 @@ def run_institutional_analysis(df, capital, cost, shares, rev_growth_input):
   # 蒙地卡羅模擬 (30 天)
   mu = float(returns_clean.mean()) if not returns_clean.empty else 0.001
   sigma = float(returns_clean.std()) if not returns_clean.empty else 0.02
-  num_simulations = 200
+  num_simulations = 1000
   num_days = 30
 
   simulated_prices = np.zeros((num_days, num_simulations))
